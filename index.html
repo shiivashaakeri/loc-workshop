@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Workshop on Learning, Optimization, and Control (LOC), November 5–6, 2026, University of Washington</title>
+<meta name="description" content="A two-day invitation-based workshop at the University of Washington on the interface of machine learning, optimization, and control. November 5–6, 2026, Seattle.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #2D2836;
+    --ink-soft: #655F6E;
+    --accent: #4B2E83;
+    --accent-soft: #ECE7F3;
+    --rust: #9C4A2F;
+    --paper: #F7F2EE;
+    --rule: #E0D8DC;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    font-family: "STIX Two Text", Georgia, serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.65;
+    font-size: 17px;
+  }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:hover { color: var(--rust); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  .wrap { max-width: 700px; margin: 0 auto; padding: 0 24px; }
+
+  header.masthead {
+    border-bottom: 1px solid var(--rule);
+    padding: 56px 0 0;
+  }
+  .masthead h1 {
+    font-size: clamp(1.8rem, 4.5vw, 2.6rem);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    max-width: 620px;
+  }
+  .masthead .acronym { color: var(--accent); }
+  .masthead .when-where {
+    margin-top: 14px;
+    font-size: 1.12rem;
+    color: var(--ink-soft);
+  }
+  .masthead .when-where strong { color: var(--ink); font-weight: 500; }
+
+  .descent { display: block; margin: 34px auto 0; width: 100%; max-width: 620px; height: auto; }
+
+  nav.toc {
+    border-bottom: 1px solid var(--rule);
+    background: var(--paper);
+    position: sticky; top: 0; z-index: 5;
+  }
+  nav.toc ul {
+    list-style: none;
+    display: flex; flex-wrap: wrap; gap: 4px 26px;
+    padding: 12px 0;
+    font-size: 0.98rem;
+  }
+  nav.toc a { text-decoration: none; color: var(--ink-soft); }
+  nav.toc a:hover { color: var(--accent); }
+
+  main section { padding: 44px 0 8px; }
+  main h2 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+  main p + p { margin-top: 12px; }
+  .measure { max-width: 620px; }
+
+  .pending {
+    margin-top: 14px;
+    padding: 14px 18px;
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    font-size: 0.98rem;
+    color: var(--ink-soft);
+  }
+  .pending em { color: var(--ink); font-style: italic; }
+
+  dl.fact {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    row-gap: 8px; column-gap: 18px;
+    max-width: 620px;
+  }
+  dl.fact dt { color: var(--ink-soft); }
+  dl.fact dd { }
+
+  ul.speakers { list-style: none; max-width: 620px; }
+  ul.speakers li { padding: 10px 0; border-bottom: 1px solid var(--rule); }
+  ul.speakers li:last-child { border-bottom: none; }
+  ul.speakers .affil { color: var(--ink-soft); font-size: 0.98rem; }
+
+  .organizers p { margin-top: 4px; }
+  .organizers .affil { color: var(--ink-soft); }
+
+  footer {
+    margin-top: 56px;
+    border-top: 1px solid var(--rule);
+    padding: 22px 0 44px;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+  }
+  @media (max-width: 520px) {
+    dl.fact { grid-template-columns: 1fr; row-gap: 2px; }
+    dl.fact dt { margin-top: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <h1>Workshop on Learning, Optimization, and&nbsp;Control <span class="acronym">(LOC)</span></h1>
+    <p class="when-where"><strong>November 5–6, 2026</strong> · University of Washington, Seattle</p>
+
+    <!-- Header artwork: Space Needle + Mount Rainier with streamlines and an iterate path.
+         Current file is a placeholder render; swap header-art.jpg for the hand-drawn version
+         when ready (keep the same filename and no code changes are needed). -->
+    <img class="descent" src="header-art.jpg" alt="Line drawing of the Space Needle and Mount Rainier surrounded by vector-field streamlines, with a path of iterates ascending to the summit" width="1400" height="933">
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#speakers">Speakers</a></li>
+      <li><a href="#program">Program</a></li>
+      <li><a href="#venue">Venue &amp; travel</a></li>
+      <li><a href="#organizers">Organizers</a></li>
+      <li><a href="#support">Support</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <section id="about">
+    <div class="wrap measure">
+      <h2>About the workshop</h2>
+      <p>The Workshop on Learning, Optimization, and Control brings together researchers working at the interface of machine learning, mathematical optimization, and control theory. Over two days at the University of Washington, invited talks and open discussion will examine how ideas move between these fields: learning-enabled control and decision-making, optimization methods for learning and control synthesis, and the analysis of data-driven dynamical systems.</p>
+      <p>The workshop is invitation-based and held in person in Seattle, with select remote presentations. It is organized in collaboration with European partner institutions.</p>
+    </div>
+  </section>
+
+  <section id="speakers">
+    <div class="wrap measure">
+      <h2>Invited speakers</h2>
+      <p>To be announced. Confirmed speakers will be listed here as invitations are finalized.</p>
+      <!-- Template rows: uncomment and fill in as speakers confirm.
+      <ul class="speakers">
+        <li>Firstname Lastname<span class="affil">, Affiliation</span></li>
+      </ul>
+      -->
+      <div class="pending"><em>Placeholder:</em> speaker list pending confirmations (UW/US invitees and European group; possible remote lecture).</div>
+    </div>
+  </section>
+
+  <section id="program">
+    <div class="wrap measure">
+      <h2>Program</h2>
+      <p>The detailed program will be posted here once the speaker list is confirmed.</p>
+      <dl class="fact">
+        <dt>Day 1</dt><dd>Thursday, November 5: schedule to be announced</dd>
+        <dt>Day 2</dt><dd>Friday, November 6: schedule to be announced</dd>
+      </dl>
+      <div class="pending"><em>Placeholder:</em> daily start/end times, talk lengths, and social program to be decided.</div>
+    </div>
+  </section>
+
+  <section id="venue">
+    <div class="wrap measure">
+      <h2>Venue &amp; travel</h2>
+      <dl class="fact">
+        <dt>Location</dt><dd>University of Washington, Seattle campus (room to be announced)</dd>
+        <dt>Airport</dt><dd>Seattle–Tacoma International Airport (SEA), about 35 minutes to campus by car, or via Link light rail to U&nbsp;District station</dd>
+        <dt>Hotels</dt><dd>Recommendations near campus will be posted here for visiting participants</dd>
+      </dl>
+      <div class="pending"><em>Placeholder:</em> room reservation in progress; hotel block and travel notes to follow.</div>
+    </div>
+  </section>
+
+  <section id="organizers">
+    <div class="wrap measure organizers">
+      <h2>Organizers</h2>
+      <p>Mehran Mesbahi<span class="affil">, Department of Aeronautics &amp; Astronautics, University of Washington</span></p>
+      <p>Shiva Shakeri<span class="affil">, Department of Aeronautics &amp; Astronautics, University of Washington</span></p>
+      <div class="pending"><em>Placeholder:</em> add partner-institution co-organizers and any acknowledgment of supporting projects once confirmed.</div>
+    </div>
+  </section>
+
+  <section id="support">
+    <div class="wrap measure">
+      <h2>Support</h2>
+      <p>The workshop is supported by the University of Washington and international partner institutions.</p>
+      <!-- Pending exact wording from the Hungarian side. The AIT 2025 site uses:
+           "HURIZONT PROJECT 2025-2026 – NKFIH – 2024-1.2.3-HU-RIZONT-2024-00030"
+           along with the NKFIH support logo. Confirm with Mehran whether the same
+           acknowledgment (and logo) is required here, then replace the placeholder below. -->
+      <div class="pending"><em>Placeholder:</em> funding acknowledgment pending: confirm with the partner side whether the HURIZONT/NKFIH project credit and logo should appear here, and with what exact wording.</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap measure">
+      <h2>Contact</h2>
+      <p>For questions about the workshop, participation, or travel, please contact the organizers at <a href="mailto:CONTACT-EMAIL-HERE">CONTACT-EMAIL-HERE</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Workshop on Learning, Optimization, and Control · November 5–6, 2026 · University of Washington, Seattle</p>
+  </div>
+</footer>
+
+</body>
+</html>
