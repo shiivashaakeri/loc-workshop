@@ -53,6 +53,12 @@
   }
   .masthead .when-where strong { color: var(--ink); font-weight: 500; }
 
+  table.program { width: 100%; max-width: 620px; border-collapse: collapse; margin: 14px 0 6px; font-size: 0.98rem; }
+  table.program caption { text-align: left; font-weight: 500; padding-bottom: 6px; color: var(--ink); }
+  table.program th { text-align: left; font-weight: 500; color: var(--ink-soft); border-bottom: 1px solid var(--accent); padding: 6px 10px 6px 0; font-size: 0.9rem; }
+  table.program td { border-bottom: 1px solid var(--rule); padding: 8px 10px 8px 0; vertical-align: top; }
+  table.program td.time { width: 110px; color: var(--ink-soft); white-space: nowrap; }
+  table.program .tba { color: var(--ink-soft); font-style: italic; }
   .descent { display: block; margin: 34px auto 40px; width: 100%; max-width: 620px; height: auto; }
 
   nav.toc {
@@ -199,10 +205,20 @@
     <div class="wrap measure">
       <h2>Program</h2>
       <p>The detailed schedule will be posted once the speaker list is confirmed.</p>
-      <dl class="fact">
-        <dt>Day 1</dt><dd>Thursday, November 5: invited talks</dd>
-        <dt>Day 2</dt><dd>Friday, November 6: invited talks</dd>
-      </dl>
+      <table class="program">
+        <caption>Day 1: Thursday, November 5</caption>
+        <tr><th>Time</th><th>Speaker</th><th>Title</th></tr>
+        <tr><td class="time">TBA</td><td class="tba">To be announced</td><td class="tba">To be announced</td></tr>
+        <tr><td class="time">TBA</td><td class="tba">To be announced</td><td class="tba">To be announced</td></tr>
+        <tr><td class="time">TBA</td><td class="tba">To be announced</td><td class="tba">To be announced</td></tr>
+      </table>
+      <table class="program">
+        <caption>Day 2: Friday, November 6</caption>
+        <tr><th>Time</th><th>Speaker</th><th>Title</th></tr>
+        <tr><td class="time">TBA</td><td class="tba">To be announced</td><td class="tba">To be announced</td></tr>
+        <tr><td class="time">TBA</td><td class="tba">To be announced</td><td class="tba">To be announced</td></tr>
+        <tr><td class="time">TBA</td><td class="tba">To be announced</td><td class="tba">To be announced</td></tr>
+      </table>
       <div class="pending"><em>Placeholder:</em> speaker schedule for each day and social program to be announced.</div>
     </div>
   </section>
