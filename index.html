@@ -104,6 +104,16 @@
   ul.speakers li:last-child { border-bottom: none; }
   ul.speakers .affil { color: var(--ink-soft); font-size: 0.98rem; }
 
+  .person-row { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 6px; }
+  .person { width: 150px; }
+  .person img {
+    display: block; width: 150px; height: 150px;
+    object-fit: cover; border: 1px solid var(--rule);
+  }
+  .person .p-name { margin-top: 8px; font-weight: 500; line-height: 1.3; }
+  .person .p-affil { color: var(--ink-soft); font-size: 0.9rem; line-height: 1.35; }
+  .person .p-talk { color: var(--accent); font-size: 0.9rem; font-style: italic; line-height: 1.35; margin-top: 3px; }
+
   .organizers p { margin-top: 4px; }
   .organizers .affil { color: var(--ink-soft); }
 
@@ -159,9 +169,14 @@
   <section id="speakers">
     <div class="wrap measure">
       <h2>Invited speakers</h2>
-      <ul class="speakers">
-        <li>Péter Baranyi<span class="affil">, Corvinus University of Budapest: <em>Neural Mesh in Control</em></span></li>
-      </ul>
+      <div class="person-row">
+        <div class="person">
+          <img src="photos/baranyi.jpg" alt="Péter Baranyi" width="150" height="150">
+          <div class="p-name">Péter Baranyi</div>
+          <div class="p-affil">Corvinus University of Budapest</div>
+          <div class="p-talk">Neural Mesh in Control</div>
+        </div>
+      </div>
       <p>Additional speakers will be announced as invitations are finalized.</p>
     </div>
   </section>
@@ -193,8 +208,18 @@
   <section id="organizers">
     <div class="wrap measure organizers">
       <h2>Organizers</h2>
-      <p>Mehran Mesbahi<span class="affil">, Department of Aeronautics &amp; Astronautics, University of Washington</span></p>
-      <p>Shiva Shakeri<span class="affil">, Department of Aeronautics &amp; Astronautics, University of Washington</span></p>
+      <div class="person-row">
+        <div class="person">
+          <img src="photos/mesbahi.jpg" alt="Mehran Mesbahi" width="150" height="150">
+          <div class="p-name">Mehran Mesbahi</div>
+          <div class="p-affil">Aeronautics &amp; Astronautics, University of Washington</div>
+        </div>
+        <div class="person">
+          <img src="photos/shakeri.jpg" alt="Shiva Shakeri" width="150" height="150">
+          <div class="p-name">Shiva Shakeri</div>
+          <div class="p-affil">Aeronautics &amp; Astronautics, University of Washington</div>
+        </div>
+      </div>
       <div class="pending"><em>Placeholder:</em> add partner-institution co-organizers and any acknowledgment of supporting projects once confirmed.</div>
     </div>
   </section>
