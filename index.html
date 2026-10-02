@@ -76,7 +76,7 @@ footer{padding:26px 0 60px;font-size:12.5px;color:var(--soft);text-align:center}
 #pbar{position:fixed;top:0;left:0;height:2.5px;width:0;background:var(--purple);z-index:20}
 .bcard img{background:var(--purple-soft)}
 @media print{
- .rail,#pbar,.band,.cal2{display:none!important}
+ .rail,.mnav,#pbar,.band,.cal2{display:none!important}
  .reveal{opacity:1!important;transform:none!important}
  body{font-size:11px}
  .frame,.sec,th,td,.kv,.kv>div{border-color:#999!important}
@@ -95,7 +95,6 @@ footer{padding:26px 0 60px;font-size:12.5px;color:var(--soft);text-align:center}
 .masthead .d b:first-child{color:#fff}
 .masthead .d b+b{color:rgba(255,255,255,.62)}
 .masthead .d p{color:#CBBFE4}
-.masthead .d img{filter:brightness(0) invert(1);opacity:.95}
 @media(max-width:860px){.masthead .t{border-bottom-color:rgba(255,255,255,.3)}}
 
 /* grid paper in sections */
@@ -136,9 +135,17 @@ footer{padding:26px 0 60px;font-size:12.5px;color:var(--soft);text-align:center}
 .rail a.active i{background:var(--purple);border-color:var(--purple)}
 .rail span{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--soft);background:#fff;border:1px solid var(--hair);padding:2px 7px;opacity:0;transform:translateX(5px);transition:opacity .15s,transform .15s;pointer-events:none}
 .rail a:hover span,.rail a.active span{opacity:1;transform:none}
-@media(max-width:1080px){.rail{right:7px;gap:11px}.rail i{width:7px;height:7px}.rail span{display:none}}
 .masthead .d .cal2{margin-top:16px;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#fff;text-decoration:underline;text-decoration-color:rgba(255,255,255,.45);text-underline-offset:3px}
 .masthead .d .cal2:hover{text-decoration-color:#fff;color:#fff;background:none}
+.mnav{display:none}
+@media(max-width:1080px){
+.mnav{display:flex;position:sticky;top:0;z-index:12;background:#fff;border-bottom:1.5px solid var(--line);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.mnav::-webkit-scrollbar{display:none}
+.mnav a{flex:none;font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--soft);padding:13px 14px 11px;border-bottom:2.5px solid transparent}
+.mnav a.active{color:var(--purple);border-bottom-color:var(--purple)}
+.rail{display:none}
+.sec{scroll-margin-top:52px}
+}
 </style><script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Event",
 "name":"Workshop on Learning, Optimization, and Control (LOC)",
@@ -169,8 +176,11 @@ footer{padding:26px 0 60px;font-size:12.5px;color:var(--soft);text-align:center}
 <div class="masthead">
 <div class="t"><h1>Learning<br>Optimization<br>Control</h1>
 <p>University of Washington</p></div>
-<div class="d"><b>05/06</b><b>NOV 2026</b><p>Seattle, Washington</p><img src="loc-seal.png" alt="LOC workshop seal"><a class="cal2" href="loc-workshop.ics" download>Add to calendar</a></div>
+<div class="d"><b>05/06</b><b>NOV 2026</b><p>Seattle, Washington</p><a class="cal2" href="loc-workshop.ics" download>Add to calendar</a></div>
 </div>
+<nav class="mnav" aria-label="Sections">
+<a href="#about">About</a><a href="#rsvp">RSVP</a><a href="#speakers">Speakers</a><a href="#program">Program</a><a href="#venue">Venue</a><a href="#organizers">Organizers</a><a href="#contact">Contact</a>
+</nav>
 <div class="band"><div class="plate"><img src="header-art.webp" alt="Photo collage of the Seattle skyline with the Space Needle blending into Mount Rainier"></div></div></div>
 <div class="sec" id="about"><h2>About</h2><div class="about"><p class="pull">“How ideas move between learning, optimization, and control.”</p><p>The Workshop on Learning, Optimization, and Control brings together researchers working at the interface of machine learning, mathematical optimization, and control theory. Over two days at the University of Washington, invited talks and open discussion will examine how ideas move between these fields: learning-enabled control and decision-making, optimization methods for learning and control synthesis, and the analysis of data-driven dynamical systems.</p><p>The workshop is invitation-based and held in person in Seattle, with select remote presentations. It is organized in collaboration with European partner institutions.</p></div></div>
 <div class="sec" id="rsvp"><h2>RSVP</h2><div>
@@ -229,10 +239,10 @@ footer{padding:26px 0 60px;font-size:12.5px;color:var(--soft);text-align:center}
 <script>
 (function(){
   var secs=[].slice.call(document.querySelectorAll('.sec[id]'));
-  var links={};[].slice.call(document.querySelectorAll('.rail a[href^="#"]')).forEach(function(a){links[a.getAttribute('href').slice(1)]=a});
+  var links={};[].slice.call(document.querySelectorAll('.rail a[href^="#"], .mnav a[href^="#"]')).forEach(function(a){var k=a.getAttribute('href').slice(1);(links[k]=links[k]||[]).push(a)});
   var spy=new IntersectionObserver(function(es){es.forEach(function(e){
-    if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove('active')});
-    var l=links[e.target.id]; if(l)l.classList.add('active');}
+    if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].forEach(function(el){el.classList.remove('active')})});
+    (links[e.target.id]||[]).forEach(function(el){el.classList.add('active')});}
   })},{rootMargin:'-40% 0px -55% 0px'});
   secs.forEach(function(s){spy.observe(s)});
   secs.forEach(function(s){s.classList.add('reveal')});
