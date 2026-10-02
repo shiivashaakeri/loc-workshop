@@ -48,7 +48,6 @@ h1{font-family:Archivo;font-weight:900;font-size:clamp(34px,5.2vw,74px);line-hei
 .bcard .nm{font-family:Archivo;font-weight:700;margin-top:12px;font-size:15.5px;line-height:1.25}
 .bcard .nm a{text-decoration:none}
 .bcard .af{font-size:12.5px;color:var(--soft);margin-top:4px;line-height:1.45}
-.bcard .tk{font-size:12.5px;color:var(--purple);margin-top:8px;line-height:1.45}
 table{width:100%;border-collapse:collapse}
 caption{font-family:Archivo;font-weight:700;text-transform:uppercase;text-align:left;padding:0 0 12px;font-size:16px;letter-spacing:.04em}
 th,td{border:1px solid var(--line);padding:10px 14px;text-align:left;font-size:13.5px}
@@ -106,9 +105,9 @@ footer{padding:26px 0 60px;font-size:12.5px;color:var(--soft);text-align:center}
 
 /* marginalia */
 .frame{position:relative}
-.margin-note{position:absolute;writing-mode:vertical-rl;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--hair)}
-.margin-note.l{left:-19px;top:50%;transform:translateY(-50%) rotate(180deg)}
-.margin-note.r{right:-19px;top:50%;transform:translateY(-50%)}
+.margin-note{position:absolute;writing-mode:vertical-rl;white-space:nowrap;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--hair)}
+.margin-note.l{left:9px;top:50%;transform:translateY(-50%) rotate(180deg)}
+.margin-note.r{right:9px;top:50%;transform:translateY(-50%)}
 @media(max-width:1300px){.margin-note{display:none}}
 
 /* pull quote */
@@ -191,19 +190,19 @@ footer{padding:26px 0 60px;font-size:12.5px;color:var(--soft);text-align:center}
 
 </div></div>
 <div class="sec" id="speakers"><h2>Speakers</h2><div><div class="bgrid"><div class="bcard"><img loading="lazy" src="photos/nesterov.jpg" alt="Yurii Nesterov">
-<p class="nm"><a href="https://scholar.google.com/citations?user=DJ8Ep8YAAAAJ">Yurii Nesterov</a></p><p class="af">Corvinus University of Budapest and UCLouvain</p><p class="tk">Title to be announced (online)</p></div>
+<p class="nm"><a href="https://scholar.google.com/citations?user=DJ8Ep8YAAAAJ">Yurii Nesterov</a></p><p class="af">Corvinus University of Budapest and UCLouvain</p></div>
 <div class="bcard"><img loading="lazy" src="photos/fazel.jpg" alt="Maryam Fazel">
-<p class="nm"><a href="https://people.ece.uw.edu/fazel_maryam/">Maryam Fazel</a></p><p class="af">Electrical & Computer Engineering, University of Washington</p><p class="tk">Title to be announced</p></div>
+<p class="nm"><a href="https://people.ece.uw.edu/fazel_maryam/">Maryam Fazel</a></p><p class="af">Electrical & Computer Engineering, University of Washington</p></div>
 <div class="bcard"><img loading="lazy" src="photos/baranyi.jpg" alt="Péter Baranyi">
-<p class="nm"><a href="https://scholar.google.com/citations?user=5Y9kzEEAAAAJ">Péter Baranyi</a></p><p class="af">Corvinus University of Budapest</p><p class="tk">Neural Mesh in Control</p></div>
+<p class="nm"><a href="https://scholar.google.com/citations?user=5Y9kzEEAAAAJ">Péter Baranyi</a></p><p class="af">Corvinus University of Budapest</p></div>
 <div class="bcard"><img loading="lazy" src="photos/csapo.jpg" alt="Ádám Csapó">
-<p class="nm"><a href="https://scholar.google.com/citations?user=5WMeN5UAAAAJ">Ádám Csapó</a></p><p class="af">Corvinus University of Budapest</p><p class="tk">Title to be announced</p></div>
+<p class="nm"><a href="https://scholar.google.com/citations?user=5WMeN5UAAAAJ">Ádám Csapó</a></p><p class="af">Corvinus University of Budapest</p></div>
 <div class="bcard"><img loading="lazy" src="photos/taghvaei.jpg" alt="Amir Taghvaei">
-<p class="nm"><a href="https://amirtag.github.io/">Amir Taghvaei</a></p><p class="af">Aeronautics & Astronautics, University of Washington</p><p class="tk">Generative Models for Stochastic Filtering and Control</p></div>
+<p class="nm"><a href="https://amirtag.github.io/">Amir Taghvaei</a></p><p class="af">Aeronautics & Astronautics, University of Washington</p></div>
 <div class="bcard"><img loading="lazy" src="photos/rigo.jpg" alt="Petra Renáta Rigó">
-<p class="nm"><a href="https://uni-corvinus.hu/post/dr-rigo-petra-renata-bemutatkozasa/?lang=en">Petra Renáta Rigó</a></p><p class="af">Corvinus University of Budapest</p><p class="tk">New Perspectives in Interior-Point Algorithms I (online)</p></div>
+<p class="nm"><a href="https://uni-corvinus.hu/post/dr-rigo-petra-renata-bemutatkozasa/?lang=en">Petra Renáta Rigó</a></p><p class="af">Corvinus University of Budapest</p></div>
 <div class="bcard"><img loading="lazy" src="photos/enagy.jpg" alt="Marianna E.-Nagy">
-<p class="nm"><a href="https://sites.google.com/view/menagy/cv">Marianna E.-Nagy</a></p><p class="af">Corvinus University of Budapest</p><p class="tk">New Perspectives in Interior-Point Algorithms II (online)</p></div></div>
+<p class="nm"><a href="https://sites.google.com/view/menagy/cv">Marianna E.-Nagy</a></p><p class="af">Corvinus University of Budapest</p></div></div>
 <p class="note">Additional speakers will be announced as invitations are finalized.</p></div></div>
 <div class="sec" id="program"><h2>Program</h2><div>
 <div class="tzbar"><span>Times in:</span><button data-tz="pt" class="on">Seattle</button><button data-tz="cet">Budapest</button><button data-tz="bj">Beijing</button></div>
@@ -223,8 +222,8 @@ footer{padding:26px 0 60px;font-size:12.5px;color:var(--soft);text-align:center}
 <tr><td class="t">3:00 PM</td><td>Yurii Nesterov</td><td>Title to be announced (online)</td></tr></table></div>
 <p class="note">Times are preliminary and may shift slightly as the program is finalized.</p></div></div>
 <div class="sec" id="venue"><h2>Venue &amp; travel</h2><div><div class="kv">
-<div>Day 1</div><div><a href="https://hub.washington.edu/reserve/book-a-space/hub-spaces/hub-332">HUB 332</a>, Husky Union Building (<a href="https://www.google.com/maps/search/?api=1&amp;query=Husky+Union+Building+University+of+Washington+Seattle">map</a>)</div>
-<div>Day 2</div><div>Room 101, Hans Rosling Center for Population Health (<a href="https://maps.app.goo.gl/AFti1rFudZdrZ17c7">map</a>)</div>
+<div>Day 1</div><div><a href="https://hub.washington.edu/reserve/book-a-space/hub-spaces/hub-332">HUB 332</a>, Husky Union Building (<a href="https://www.google.com/maps/search/?api=1&amp;query=Husky+Union+Building+University+of+Washington+Seattle" target="_blank" rel="noopener">map</a>)</div>
+<div>Day 2</div><div>Room 101, Hans Rosling Center for Population Health (<a href="https://maps.app.goo.gl/AFti1rFudZdrZ17c7" target="_blank" rel="noopener">map</a>)</div>
 <div>Airport</div><div>Seattle–Tacoma International Airport (SEA), about 35 minutes to campus by car, or via Link light rail to U District station</div>
 <div>Hotels</div><div><a href="https://www.marriott.com/en-us/hotels/seaud-residence-inn-seattle-university-district/overview/">Residence Inn University District</a>, <a href="https://www.hilton.com/en/hotels/seagsgu-graduate-seattle/">Graduate Seattle by Hilton</a>, <a href="https://www.staypineapple.com/watertown-hotel-seattle-wa">Watertown Hotel</a>, and <a href="https://www.staypineapple.com/university-inn-seattle-wa">University Inn</a></div></div>
 <p class="note">Directions and parking details to follow.</p></div></div>
