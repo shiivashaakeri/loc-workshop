@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//LOC Workshop//UW Seattle//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:loc2026-day1@shiivashaakeri.github.io
+DTSTAMP:20261001T000000Z
+DTSTART:20261105T173000Z
+DTEND:20261106T010000Z
+SUMMARY:LOC Workshop - Day 1 (Learning, Optimization, and Control)
+LOCATION:HUB 332, Husky Union Building, University of Washington, Seattle
+DESCRIPTION:Workshop on Learning, Optimization, and Control. Details: https://shiivashaakeri.github.io/loc-workshop/
+END:VEVENT
+BEGIN:VEVENT
+UID:loc2026-day2@shiivashaakeri.github.io
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20261106
+DTEND;VALUE=DATE:20261107
+SUMMARY:LOC Workshop - Day 2 (Learning, Optimization, and Control)
+LOCATION:Room 101, Hans Rosling Center for Population Health, University of Washington, Seattle
+DESCRIPTION:Workshop on Learning, Optimization, and Control. Details: https://shiivashaakeri.github.io/loc-workshop/
+END:VEVENT
+END:VCALENDAR
