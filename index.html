@@ -20,28 +20,28 @@ body{font-family:"IBM Plex Mono",monospace;background:#fff;color:var(--ink);font
 a{color:var(--ink);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:var(--hair)}
 a:hover{color:var(--purple);text-decoration-color:var(--purple)}
 .wrap{max-width:1240px;margin:0 auto;padding:0 24px}
-.frame{border:1.5px solid var(--line);margin:32px 0 0}
-.masthead{display:grid;grid-template-columns:1fr auto;border-bottom:1.5px solid var(--line)}
-.masthead .t{padding:40px 36px;border-right:1.5px solid var(--line)}
+.frame{border:1px solid var(--line);margin:32px 0 0}
+.masthead{display:grid;grid-template-columns:1fr auto;border-bottom:1px solid var(--line)}
+.masthead .t{padding:40px 36px;border-right:1px solid var(--line);display:flex;flex-direction:column}
 h1{font-family:Archivo;font-weight:900;font-size:clamp(34px,5.2vw,74px);line-height:.96;text-transform:uppercase;letter-spacing:-.015em}
 .masthead .t p{margin-top:18px;color:var(--soft)}
-.masthead .d{padding:40px 36px;display:flex;flex-direction:column;justify-content:center;align-items:flex-end;text-align:right;gap:2px}
+.masthead .d{padding:40px 36px;display:flex;flex-direction:column;align-items:flex-end;text-align:right;gap:2px}
 .masthead .d b{font-family:Archivo;font-weight:900;font-size:clamp(38px,5.4vw,80px);line-height:.92}
 .masthead .d b:first-child{color:var(--purple)}
 .masthead .d p{margin-top:12px;color:var(--soft)}
 .masthead .d img{width:92px;margin-top:18px}
 .band img{display:block}
-.band{padding:30px 36px;background-image:radial-gradient(rgba(75,46,131,.14) 1px,transparent 1.3px);background-size:6px 6px}
+.band{position:relative;padding:30px 36px;background-image:radial-gradient(rgba(75,46,131,.14) 1px,transparent 1.3px);background-size:6px 6px}
 
-.band{border-bottom:1.5px solid var(--line)}
-.sec{border-bottom:1.5px solid var(--line);display:grid;grid-template-columns:230px 1fr}
-.sec:last-of-type{border-bottom:none}
-.sec>h2{font-family:Archivo;font-weight:700;text-transform:uppercase;font-size:14px;letter-spacing:.12em;background:var(--purple);color:#fff;padding:26px 24px;border-right:1.5px solid var(--line)}
+.band{border-bottom:1px solid var(--line)}
+.sec{border-bottom:1px solid var(--line);display:grid;grid-template-columns:230px 1fr}
+
+.sec>h2{font-family:Archivo;font-weight:700;text-transform:uppercase;font-size:14px;letter-spacing:.12em;background:var(--purple);color:#fff;padding:26px 24px;border-right:1px solid var(--line)}
 
 .sec>div{padding:34px 36px}
-.about p{max-width:860px}
+
 .about p+p{margin-top:14px}
-.bgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:1.5px;background:var(--line);border:1.5px solid var(--line)}
+.bgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:1.5px;background:var(--line);border:1px solid var(--line)}
 .bcard{background:#fff;padding:16px;transition:background .15s}
 .bcard:hover{background:var(--purple-soft)}
 .bcard img{width:100%;aspect-ratio:1;object-fit:cover}
@@ -55,13 +55,13 @@ th,td{border:1px solid var(--line);padding:10px 14px;text-align:left;font-size:1
 th{background:var(--purple-soft);font-weight:500;text-transform:uppercase;font-size:11.5px;letter-spacing:.08em}
 td.t{width:105px;color:var(--soft)}
 table+table{margin-top:30px}
-.kv{display:grid;grid-template-columns:170px 1fr;border:1.5px solid var(--line);max-width:960px}
+.kv{display:grid;grid-template-columns:170px 1fr;border:1px solid var(--line)}
 .kv>div{padding:12px 16px;border-bottom:1px solid var(--line)}
 .kv>div:nth-child(odd){border-right:1px solid var(--line);background:var(--purple-soft);text-transform:uppercase;font-size:11.5px;letter-spacing:.08em;padding-top:14px}
 .kv>div:nth-last-child(-n+2){border-bottom:none}
 .note{margin-top:18px;font-size:12.5px;color:var(--soft)}
 footer{padding:26px 0 60px;font-size:12.5px;color:var(--soft);text-align:center}
-@media(max-width:860px){.sec{grid-template-columns:1fr}.sec>h2{border-right:none;border-bottom:1.5px solid var(--line)}.masthead{grid-template-columns:1fr}.masthead .t{border-right:none;border-bottom:1.5px solid var(--line)}.masthead .d{align-items:flex-start;text-align:left}}
+@media(max-width:860px){.sec{grid-template-columns:1fr}.sec>h2{border-right:none;border-bottom:1px solid var(--line)}.masthead{grid-template-columns:1fr}.masthead .t{border-right:none;border-bottom:1px solid var(--line)}.masthead .d{align-items:flex-start;text-align:left}}
 
 .sec{scroll-margin-top:24px}
 .bcard:hover{background:var(--purple-soft);transform:translate(1px,1px)}
@@ -70,8 +70,8 @@ footer{padding:26px 0 60px;font-size:12.5px;color:var(--soft);text-align:center}
 .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}}
 
-.about{position:relative;overflow:hidden}
-.about::before{content:"";position:absolute;right:24px;top:50%;transform:translateY(-50%);width:320px;height:320px;background:url('loc-seal.png') no-repeat center/contain;opacity:.05;pointer-events:none}
+.about{position:relative}
+.about::before{content:"";position:absolute;right:44px;bottom:-130px;width:320px;height:320px;background:url('loc-seal.png') no-repeat center/contain;opacity:.05;pointer-events:none}
 .about p{position:relative}
 #pbar{position:fixed;top:0;left:0;height:2.5px;width:0;background:var(--purple);z-index:20}
 .bcard img{background:var(--purple-soft)}
@@ -107,8 +107,8 @@ footer{padding:26px 0 60px;font-size:12.5px;color:var(--soft);text-align:center}
 /* marginalia */
 .frame{position:relative}
 .margin-note{position:absolute;writing-mode:vertical-rl;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--hair)}
-.margin-note.l{left:-18px;top:50%;transform:translateY(-50%) rotate(180deg)}
-.margin-note.r{right:-18px;top:50%;transform:translateY(-50%)}
+.margin-note.l{left:-19px;top:50%;transform:translateY(-50%) rotate(180deg)}
+.margin-note.r{right:-19px;top:50%;transform:translateY(-50%)}
 @media(max-width:1300px){.margin-note{display:none}}
 
 /* pull quote */
@@ -120,7 +120,7 @@ footer{padding:26px 0 60px;font-size:12.5px;color:var(--soft);text-align:center}
 
 /* time-zone toggle */
 .tzbar{display:flex;align-items:center;gap:8px;margin-bottom:24px;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
-.tzbar button{font-family:"IBM Plex Mono",monospace;font-size:12px;text-transform:uppercase;letter-spacing:.06em;background:#fff;border:1.5px solid var(--line);padding:7px 14px;cursor:pointer}
+.tzbar button{font-family:"IBM Plex Mono",monospace;font-size:12px;text-transform:uppercase;letter-spacing:.06em;background:#fff;border:1px solid var(--line);padding:7px 14px;cursor:pointer}
 .tzbar button:hover{background:var(--purple-soft)}
 .tzbar button.on{background:var(--purple);color:#fff;border-color:var(--purple)}
 
@@ -135,17 +135,19 @@ footer{padding:26px 0 60px;font-size:12.5px;color:var(--soft);text-align:center}
 .rail a.active i{background:var(--purple);border-color:var(--purple)}
 .rail span{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--soft);background:#fff;border:1px solid var(--hair);padding:2px 7px;opacity:0;transform:translateX(5px);transition:opacity .15s,transform .15s;pointer-events:none}
 .rail a:hover span,.rail a.active span{opacity:1;transform:none}
-.masthead .d .cal2{margin-top:16px;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#fff;text-decoration:underline;text-decoration-color:rgba(255,255,255,.45);text-underline-offset:3px}
+.masthead .d .cal2{margin-top:auto;padding-top:16px;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#fff;text-decoration:underline;text-decoration-color:rgba(255,255,255,.45);text-underline-offset:3px}
 .masthead .d .cal2:hover{text-decoration-color:#fff;color:#fff;background:none}
 .mnav{display:none}
 @media(max-width:1080px){
-.mnav{display:flex;position:sticky;top:0;z-index:12;background:#fff;border-bottom:1.5px solid var(--line);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.mnav{display:flex;position:sticky;top:0;z-index:12;background:#fff;border-bottom:1px solid var(--line);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .mnav::-webkit-scrollbar{display:none}
 .mnav a{flex:none;font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--soft);padding:13px 14px 11px;border-bottom:2.5px solid transparent}
 .mnav a.active{color:var(--purple);border-bottom-color:var(--purple)}
 .rail{display:none}
 .sec{scroll-margin-top:52px}
 }
+.sec>div>p,.about p,.kv>div:nth-child(even){text-align:justify;text-justify:inter-word;hyphens:auto}
+.pull,.note{text-align:left}
 </style><script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Event",
 "name":"Workshop on Learning, Optimization, and Control (LOC)",
@@ -172,7 +174,7 @@ footer{padding:26px 0 60px;font-size:12.5px;color:var(--soft);text-align:center}
 <a href="#contact"><span>Contact</span><i></i></a>
 </nav>
 
-<div class="wrap"><div class="frame"><span class="margin-note l">University of Washington | Seattle</span><span class="margin-note r">Learning Optimization Control | 2026</span>
+<div class="wrap"><div class="frame">
 <div class="masthead">
 <div class="t"><h1>Learning<br>Optimization<br>Control</h1>
 <p>University of Washington</p></div>
@@ -181,11 +183,11 @@ footer{padding:26px 0 60px;font-size:12.5px;color:var(--soft);text-align:center}
 <nav class="mnav" aria-label="Sections">
 <a href="#about">About</a><a href="#rsvp">RSVP</a><a href="#speakers">Speakers</a><a href="#program">Program</a><a href="#venue">Venue</a><a href="#organizers">Organizers</a><a href="#contact">Contact</a>
 </nav>
-<div class="band"><div class="plate"><img src="header-art.webp" alt="Photo collage of the Seattle skyline with the Space Needle blending into Mount Rainier"></div></div></div>
+<div class="band"><span class="margin-note l">University of Washington | Seattle</span><span class="margin-note r">Learning Optimization Control | 2026</span><div class="plate"><img src="header-art.webp" alt="Photo collage of the Seattle skyline with the Space Needle blending into Mount Rainier"></div></div></div>
 <div class="sec" id="about"><h2>About</h2><div class="about"><p class="pull">“How ideas move between learning, optimization, and control.”</p><p>The Workshop on Learning, Optimization, and Control brings together researchers working at the interface of machine learning, mathematical optimization, and control theory. Over two days at the University of Washington, invited talks and open discussion will examine how ideas move between these fields: learning-enabled control and decision-making, optimization methods for learning and control synthesis, and the analysis of data-driven dynamical systems.</p><p>The workshop is invitation-based and held in person in Seattle, with select remote presentations. It is organized in collaboration with European partner institutions.</p></div></div>
 <div class="sec" id="rsvp"><h2>RSVP</h2><div>
-<p style="max-width:860px">Attendance is by invitation and seating is limited. If you plan to join us, please RSVP by <strong>Tuesday, October 20, 2026</strong>.</p>
-<p style="margin-top:18px"><a class="btn" href="https://forms.gle/qr1oem7wF1UE2u8K8">RSVP form</a></p>
+<p>Attendance is by invitation and seating is limited. If you plan to join us, please RSVP by <strong>Tuesday, October 20, 2026</strong>.</p>
+<p style="margin-top:18px"><a class="btn" href="https://forms.gle/qr1oem7wF1UE2u8K8" target="_blank" rel="noopener">RSVP form</a></p>
 
 </div></div>
 <div class="sec" id="speakers"><h2>Speakers</h2><div><div class="bgrid"><div class="bcard"><img loading="lazy" src="photos/nesterov.jpg" alt="Yurii Nesterov">
@@ -230,9 +232,9 @@ footer{padding:26px 0 60px;font-size:12.5px;color:var(--soft);text-align:center}
 <p class="nm"><a href="https://mehran-mesbahi.github.io">Mehran Mesbahi</a></p><p class="af">Aeronautics & Astronautics, University of Washington</p></div>
 <div class="bcard"><img loading="lazy" src="photos/shakeri.jpg" alt="Shiva Shakeri">
 <p class="nm"><a href="https://shiivashaakeri.github.io">Shiva Shakeri</a></p><p class="af">Aeronautics & Astronautics, University of Washington</p></div></div></div></div>
-<div class="sec" id="support"><h2>Support</h2><div><p style="max-width:860px">The workshop is supported by the University of Washington and international partner institutions.</p>
+<div class="sec" id="support"><h2>Support</h2><div><p>The workshop is supported by the University of Washington and international partner institutions.</p>
 <p class="note">Funding acknowledgment to be finalized.</p></div></div>
-<div class="sec" id="contact" style="border-top:1.5px solid var(--line)"><h2>Contact</h2><div><p>For questions about the workshop, participation, or travel: <a href="mailto:mesbahi@uw.edu">mesbahi@uw.edu</a> | <a href="mailto:sshakeri@uw.edu">sshakeri@uw.edu</a></p></div></div>
+<div class="sec" id="contact"><h2>Contact</h2><div><p>For questions about the workshop, participation, or travel: <a href="mailto:mesbahi@uw.edu">mesbahi@uw.edu</a> | <a href="mailto:sshakeri@uw.edu">sshakeri@uw.edu</a></p></div></div>
 </div>
 <footer>Workshop on Learning, Optimization, and Control | November 5–6, 2026 | University of Washington, Seattle<br><span style="opacity:.7">Last updated: October 2, 2026</span></footer>
 </div>
@@ -240,11 +242,22 @@ footer{padding:26px 0 60px;font-size:12.5px;color:var(--soft);text-align:center}
 (function(){
   var secs=[].slice.call(document.querySelectorAll('.sec[id]'));
   var links={};[].slice.call(document.querySelectorAll('.rail a[href^="#"], .mnav a[href^="#"]')).forEach(function(a){var k=a.getAttribute('href').slice(1);(links[k]=links[k]||[]).push(a)});
-  var spy=new IntersectionObserver(function(es){es.forEach(function(e){
-    if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].forEach(function(el){el.classList.remove('active')})});
-    (links[e.target.id]||[]).forEach(function(el){el.classList.add('active')});}
-  })},{rootMargin:'-40% 0px -55% 0px'});
-  secs.forEach(function(s){spy.observe(s)});
+  function spyUpdate(){
+    var h=document.documentElement;
+    var sc=h.scrollTop||document.body.scrollTop;
+    var probe=sc+Math.min(h.clientHeight*0.35,260);
+    var cur=secs.length?secs[0].id:null;
+    secs.forEach(function(s){
+      var top=s.getBoundingClientRect().top+sc;
+      if(top<=probe)cur=s.id;
+    });
+    if(sc+h.clientHeight>=h.scrollHeight-4)cur=secs[secs.length-1].id;
+    Object.keys(links).forEach(function(k){links[k].forEach(function(el){el.classList.remove('active')})});
+    if(cur)(links[cur]||[]).forEach(function(el){el.classList.add('active')});
+  }
+  window.addEventListener('scroll',spyUpdate,{passive:true});
+  window.addEventListener('resize',spyUpdate,{passive:true});
+  spyUpdate();
   secs.forEach(function(s){s.classList.add('reveal')});
   var rev=new IntersectionObserver(function(es){es.forEach(function(e){
     if(e.isIntersecting){e.target.classList.add('in');rev.unobserve(e.target)}
