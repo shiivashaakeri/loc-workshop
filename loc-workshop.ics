@@ -14,8 +14,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:loc2026-day2@shiivashaakeri.github.io
 DTSTAMP:20261001T000000Z
-DTSTART;VALUE=DATE:20261106
-DTEND;VALUE=DATE:20261107
+DTSTART:20261106T170000Z
+DTEND:20261107T000000Z
 SUMMARY:LOC Workshop - Day 2 (Learning, Optimization, and Control)
 LOCATION:Room 101, Hans Rosling Center for Population Health, University of Washington, Seattle
 DESCRIPTION:Workshop on Learning, Optimization, and Control. Details: https://shiivashaakeri.github.io/loc-workshop/

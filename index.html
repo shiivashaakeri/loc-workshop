@@ -80,11 +80,6 @@ nav.toc a.cal{margin-left:auto;border-right:none;border-left:1px solid var(--hai
 .about::before{content:"";position:absolute;right:24px;top:50%;transform:translateY(-50%);width:320px;height:320px;background:url('loc-seal.png') no-repeat center/contain;opacity:.05;pointer-events:none}
 .about p{position:relative}
 #pbar{position:fixed;top:0;left:0;height:2.5px;width:0;background:var(--purple);z-index:20}
-td details summary{cursor:pointer;list-style:none}
-td details summary::-webkit-details-marker{display:none}
-td details summary::after{content:" +";color:var(--purple);font-weight:500}
-td details[open] summary::after{content:" \2212"}
-td details .abs{margin-top:8px;padding:10px 12px;background:var(--purple-soft);font-size:12.5px;color:var(--soft)}
 .bcard img{background:var(--purple-soft)}
 @media print{
  nav.toc,#pbar,.band{display:none!important}
@@ -96,8 +91,7 @@ td details .abs{margin-top:8px;padding:10px 12px;background:var(--purple-soft);f
  a{text-decoration:none;color:#000}
  .bcard img{display:none}
  .bgrid{grid-template-columns:repeat(3,1fr)}
- td details .abs{display:none}
-}
+ }
 
 .masthead{background:var(--purple)}
 .masthead .t,.masthead .d{color:#fff}
@@ -189,17 +183,20 @@ td details .abs{margin-top:8px;padding:10px 12px;background:var(--purple-soft);f
 <div class="sec" id="program"><h2>Program</h2><div>
 <div class="tzbar"><span>Times in:</span><button data-tz="pt" class="on">Seattle</button><button data-tz="cet">Budapest</button><button data-tz="bj">Beijing</button></div>
 <div class="dayblock"><table><caption>Day 1 | Thursday, November 5 | HUB 332</caption><tr><th>Time</th><th>Speaker</th><th>Title</th></tr><tr><td class="t">9:30 AM</td><td>Mehran Mesbahi</td><td>Opening remarks</td></tr>
-<tr><td class="t">TBA</td><td>Petra Renáta Rigó</td><td><details><summary>New Perspectives in Interior-Point Algorithms I (online)</summary><p class="abs">Abstract to be announced.</p></details></td></tr>
-<tr><td class="t">TBA</td><td>Marianna E.-Nagy</td><td><details><summary>New Perspectives in Interior-Point Algorithms II (online)</summary><p class="abs">Abstract to be announced.</p></details></td></tr>
-<tr><td class="t">TBA</td><td>To be announced</td><td>To be announced</td></tr>
+<tr><td class="t">9:45 AM</td><td>Petra Renáta Rigó</td><td>New Perspectives in Interior-Point Algorithms I (online)</td></tr>
+<tr><td class="t">10:15 AM</td><td>Marianna E.-Nagy</td><td>New Perspectives in Interior-Point Algorithms II (online)</td></tr>
+<tr><td class="t">10:45 AM</td><td colspan="2">Break</td></tr>
+<tr><td class="t">11:00 AM</td><td>Péter Baranyi</td><td>Neural Mesh in Control</td></tr>
+<tr><td class="t">11:30 AM</td><td>Ádám Csapó</td><td>Title to be announced</td></tr>
 <tr><td class="t">12:00 PM</td><td colspan="2">Lunch</td></tr>
-<tr><td class="t">TBA</td><td>Maryam Fazel</td><td>Title to be announced</td></tr>
-<tr><td class="t">1:00 PM</td><td>Session</td><td>Short talks by postdoctoral and student researchers (lineup to be announced)</td></tr>
+<tr><td class="t">1:00 PM</td><td>Maryam Fazel</td><td>Title to be announced</td></tr>
+<tr><td class="t">1:30 PM</td><td>Session</td><td>Short talks by postdoctoral and student researchers (lineup to be announced)</td></tr>
 <tr><td class="t">3:30 PM</td><td colspan="2">Reception</td></tr></table></div>
-<div class="dayblock"><table><caption>Day 2 | Friday, November 6 | Hans Rosling Center 101</caption><tr><th>Time</th><th>Speaker</th><th>Title</th></tr><tr><td class="t">TBA</td><td>Amir Taghvaei</td><td><details><summary>Generative Models for Stochastic Filtering and Control</summary><p class="abs">Abstract to be announced.</p></details></td></tr>
-<tr><td class="t">TBA</td><td>To be announced</td><td>To be announced</td></tr>
-<tr><td class="t">TBA</td><td>To be announced</td><td>To be announced</td></tr></table></div>
-<p class="note">Detailed schedule and social program to be announced.</p></div></div>
+<div class="dayblock"><table><caption>Day 2 | Friday, November 6 | Hans Rosling Center 101</caption><tr><th>Time</th><th>Speaker</th><th>Title</th></tr><tr><td class="t">9:00 AM</td><td colspan="2">Informal discussions over breakfast</td></tr>
+<tr><td class="t">10:30 AM</td><td>Amir Taghvaei</td><td>Generative Models for Stochastic Filtering and Control</td></tr>
+<tr><td class="t">11:15 AM</td><td class="tba">To be announced</td><td class="tba">To be announced</td></tr>
+<tr><td class="t">3:00 PM</td><td>Yurii Nesterov</td><td>Title to be announced (online)</td></tr></table></div>
+<p class="note">Times are preliminary and may shift slightly as the program is finalized.</p></div></div>
 <div class="sec" id="venue"><h2>Venue &amp; travel</h2><div><div class="kv">
 <div>Day 1</div><div><a href="https://hub.washington.edu/reserve/book-a-space/hub-spaces/hub-332">HUB 332</a>, Husky Union Building (<a href="https://www.google.com/maps/search/?api=1&amp;query=Husky+Union+Building+University+of+Washington+Seattle">map</a>)</div>
 <div>Day 2</div><div>Room 101, Hans Rosling Center for Population Health (<a href="https://maps.app.goo.gl/AFti1rFudZdrZ17c7">map</a>)</div>
