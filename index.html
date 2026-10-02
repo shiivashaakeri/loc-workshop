@@ -63,18 +63,12 @@ table+table{margin-top:30px}
 footer{padding:26px 0 60px;font-size:12.5px;color:var(--soft);text-align:center}
 @media(max-width:860px){.sec{grid-template-columns:1fr}.sec>h2{border-right:none;border-bottom:1.5px solid var(--line)}.masthead{grid-template-columns:1fr}.masthead .t{border-right:none;border-bottom:1.5px solid var(--line)}.masthead .d{align-items:flex-start;text-align:left}}
 
-.sec{scroll-margin-top:62px}
-nav.toc{position:sticky;top:0;z-index:10;display:flex;flex-wrap:wrap;background:#fff;border-bottom:1.5px solid var(--line)}
-nav.toc a{font-size:12.5px;text-transform:uppercase;letter-spacing:.08em;text-decoration:none;padding:12px 20px;border-right:1px solid var(--hair);color:var(--ink)}
-nav.toc a:hover{background:var(--purple-soft);color:var(--purple)}
-nav.toc a.active{background:var(--purple);color:#fff}
-nav.toc a.cal{margin-left:auto;border-right:none;border-left:1px solid var(--hair);color:var(--purple)}
+.sec{scroll-margin-top:24px}
 .bcard:hover{background:var(--purple-soft);transform:translate(1px,1px)}
 .bcard{transition:background .15s,transform .1s}
 .reveal{opacity:0;transform:translateY(8px);transition:opacity .22s ease,transform .22s ease}
 .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}}
-@media(max-width:860px){nav.toc a{padding:10px 13px;font-size:11.5px}nav.toc a.cal{margin-left:0}}
 
 .about{position:relative;overflow:hidden}
 .about::before{content:"";position:absolute;right:24px;top:50%;transform:translateY(-50%);width:320px;height:320px;background:url('loc-seal.png') no-repeat center/contain;opacity:.05;pointer-events:none}
@@ -82,7 +76,7 @@ nav.toc a.cal{margin-left:auto;border-right:none;border-left:1px solid var(--hai
 #pbar{position:fixed;top:0;left:0;height:2.5px;width:0;background:var(--purple);z-index:20}
 .bcard img{background:var(--purple-soft)}
 @media print{
- nav.toc,#pbar,.band{display:none!important}
+ .rail,#pbar,.band,.cal2{display:none!important}
  .reveal{opacity:1!important;transform:none!important}
  body{font-size:11px}
  .frame,.sec,th,td,.kv,.kv>div{border-color:#999!important}
@@ -135,6 +129,16 @@ nav.toc a.cal{margin-left:auto;border-right:none;border-left:1px solid var(--hai
 @media print{.tzbar,.margin-note{display:none!important}.masthead{background:none}.masthead .t,.masthead .d,.masthead .d b{color:#000}}
 .btn{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:13px;text-transform:uppercase;letter-spacing:.08em;background:var(--purple);color:#fff;border:1.5px solid var(--purple);padding:12px 26px;text-decoration:none}
 .btn:hover{background:#fff;color:var(--purple)}
+.rail{position:fixed;right:16px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:13px;z-index:15}
+.rail a{display:flex;align-items:center;gap:9px;justify-content:flex-end;text-decoration:none}
+.rail i{width:9px;height:9px;border:1.5px solid var(--ink);background:#fff;display:block;flex:none}
+.rail a:hover i{border-color:var(--purple)}
+.rail a.active i{background:var(--purple);border-color:var(--purple)}
+.rail span{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--soft);background:#fff;border:1px solid var(--hair);padding:2px 7px;opacity:0;transform:translateX(5px);transition:opacity .15s,transform .15s;pointer-events:none}
+.rail a:hover span,.rail a.active span{opacity:1;transform:none}
+@media(max-width:1080px){.rail{display:none}}
+.masthead .d .cal2{margin-top:16px;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#fff;text-decoration:underline;text-decoration-color:rgba(255,255,255,.45);text-underline-offset:3px}
+.masthead .d .cal2:hover{text-decoration-color:#fff;color:#fff;background:none}
 </style><script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Event",
 "name":"Workshop on Learning, Optimization, and Control (LOC)",
@@ -151,13 +155,22 @@ nav.toc a.cal{margin-left:auto;border-right:none;border-left:1px solid var(--hai
 </script>
 </head><body>
 <div id="pbar"></div>
+<nav class="rail" aria-label="Sections">
+<a href="#about"><span>About</span><i></i></a>
+<a href="#rsvp"><span>RSVP</span><i></i></a>
+<a href="#speakers"><span>Speakers</span><i></i></a>
+<a href="#program"><span>Program</span><i></i></a>
+<a href="#venue"><span>Venue</span><i></i></a>
+<a href="#organizers"><span>Organizers</span><i></i></a>
+<a href="#contact"><span>Contact</span><i></i></a>
+</nav>
+
 <div class="wrap"><div class="frame"><span class="margin-note l">University of Washington | Seattle</span><span class="margin-note r">Learning Optimization Control | 2026</span>
 <div class="masthead">
 <div class="t"><h1>Learning<br>Optimization<br>Control</h1>
 <p>University of Washington</p></div>
-<div class="d"><b>05/06</b><b>NOV 2026</b><p>Seattle, Washington</p><img src="loc-seal.png" alt="LOC workshop seal"></div>
+<div class="d"><b>05/06</b><b>NOV 2026</b><p>Seattle, Washington</p><img src="loc-seal.png" alt="LOC workshop seal"><a class="cal2" href="loc-workshop.ics" download>Add to calendar</a></div>
 </div>
-<nav class="toc" aria-label="Sections"><a href="#about">About</a><a href="#rsvp">RSVP</a><a href="#speakers">Speakers</a><a href="#program">Program</a><a href="#venue">Venue</a><a href="#organizers">Organizers</a><a href="#contact">Contact</a><a class="cal" href="loc-workshop.ics" download>Add to calendar</a></nav>
 <div class="band"><div class="plate"><img src="header-art.webp" alt="Photo collage of the Seattle skyline with the Space Needle blending into Mount Rainier"></div></div></div>
 <div class="sec" id="about"><h2>About</h2><div class="about"><p class="pull">“How ideas move between learning, optimization, and control.”</p><p>The Workshop on Learning, Optimization, and Control brings together researchers working at the interface of machine learning, mathematical optimization, and control theory. Over two days at the University of Washington, invited talks and open discussion will examine how ideas move between these fields: learning-enabled control and decision-making, optimization methods for learning and control synthesis, and the analysis of data-driven dynamical systems.</p><p>The workshop is invitation-based and held in person in Seattle, with select remote presentations. It is organized in collaboration with European partner institutions.</p></div></div>
 <div class="sec" id="rsvp"><h2>RSVP</h2><div>
@@ -216,7 +229,7 @@ nav.toc a.cal{margin-left:auto;border-right:none;border-left:1px solid var(--hai
 <script>
 (function(){
   var secs=[].slice.call(document.querySelectorAll('.sec[id]'));
-  var links={};[].slice.call(document.querySelectorAll('nav.toc a[href^="#"]')).forEach(function(a){links[a.getAttribute('href').slice(1)]=a});
+  var links={};[].slice.call(document.querySelectorAll('.rail a[href^="#"]')).forEach(function(a){links[a.getAttribute('href').slice(1)]=a});
   var spy=new IntersectionObserver(function(es){es.forEach(function(e){
     if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove('active')});
     var l=links[e.target.id]; if(l)l.classList.add('active');}
